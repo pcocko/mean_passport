@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="MEANPassportApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+
+    <title>MEANPassport - How to use AngularJS + Express + NodeJS + MongoDB + Passport.</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+    
+    
+    <!-- JavaScripts needed at the beginning
+    ================================================== -->
+    <script type="text/javascript" src="assets/js/angular.min.js"></script>
+    <script type="text/javascript" src="assets/js/angular-route.min.js"></script>
+    <script type="text/javascript" src="scripts.js"></script>
+    
+  </head>
+
+  <body ng-controller="mainController">
+  	<! ===== HEADER === >
+	<header>
+		<nav class="navbar navbar-default">
+			<div class="container">
+				<ul class="nav navbar-nav navbar-right">
+				<li><a href="#"><i class="fa fa-home"></i> Inicio</a></li>
+				<li><a href="#login"><i class="fa fa-user"></i><% if (typeof user == 'undefined' ||  user == null) { %> Entrar <% 
+					} else { %><%= " Hola, " + user.local.username %><% } %></a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<! ========== HEADERWRAP ==================================================================================================== 
+	=============================================================================================================================>
+	<div ng-view></div>
+    
+
+	<! ========== FOOTER ======================================================================================================== 
+	=============================================================================================================================>    
+
+	
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/bootstrap.min.js"></script>
+
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<div class="container">
+
+	<div class="page-header text-center">
+		<h1><span class="fa fa-anchor"></span> Perfil del usuario</h1>
+		<a href="/partials/logout" class="btn btn-default btn-sm">Salir</a>
+	</div>
+
+	<div class="row">
+
+		<!-- LOCAL INFORMATION -->
+		<div class="col-sm-6">
+			<div class="well">
+				<h3><span class="fa fa-user"></span> Local</h3>
+
+					<p>
+						<strong>id</strong>: <%= user._id %><br>
+						<strong>Usuario</strong>: <%= user.local.username %><br>
+						<strong>Correo</strong>: <%= user.local.email %><br>
+						<strong>Contraseña</strong>: <%= user.local.password %>
+					</p>
+
+			</div>
+		</div>
+
+	</div>
+
+</div>

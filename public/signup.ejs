@@ -1,0 +1,37 @@
+<div class="container">
+
+<div class="col-sm-4 col-sm-offset-4">
+
+	<h1><span class="fa fa-sign-in"></span> Alta de usuario</h1>
+
+	<!-- show any messages that come back with authentication -->
+	<% if (message.length > 0) { %>
+		<div class="alert alert-danger"><%= message %></div>
+	<% } %>
+
+	<!-- LOGIN FORM -->
+	<form action="/partials/signup" method="post">
+		<div class="form-group">
+			<label>Usuario</label>
+			<input type="text" class="form-control" name="usuario">
+		</div>
+		<div class="form-group">
+			<label>Correo</label>
+			<input type="text" class="form-control" name="email">
+		</div>
+		<div class="form-group">
+			<label>Contraseña</label>
+			<input type="password" class="form-control" name="password">
+		</div>
+
+		<button type="submit" class="btn btn-warning btn-lg">Registrarse</button>
+	</form>
+
+	<hr>
+
+	<p>Ya tengo una cuenta, <a href="#login">Entrar</a><br/>
+	No recuerdo la contraseña, <a href="/">Recuperarla</a>.</p>
+
+</div>
+
+</div>
